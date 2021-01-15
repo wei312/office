@@ -16,6 +16,11 @@ import java.util.Map;
  **/
 public interface ApiListService extends IService<ApiList> {
 
+    /*
+     * 查询API BY ID
+     * @param id
+     * @return com.office.modules.api.model.entity.ApiList
+     **/
     ApiList getByApiId(String id);
 
     boolean updateByApiId(ApiList apiList);
