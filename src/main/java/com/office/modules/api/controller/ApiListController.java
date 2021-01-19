@@ -12,6 +12,9 @@ import com.office.modules.export.utils.ExcelUtil;
 import com.office.modules.export.utils.WordUtil;
 import com.office.modules.sys.entity.SysUserEntity;
 import com.office.modules.sys.utils.DownloadUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiOperation;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -34,6 +37,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2020/12/15 17:04
  *
  **/
+@Api("API相关接口")
 @RestController
 @RequestMapping("/api")
 public class ApiListController {
@@ -45,6 +49,7 @@ public class ApiListController {
      * 新增
      * @return
      */
+    @ApiOperation("查询单个API")
     @PostMapping("/save")
     @RequiresPermissions("api:save")
     public R save(@RequestBody ApiList apiList){
