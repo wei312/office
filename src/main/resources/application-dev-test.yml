@@ -32,6 +32,9 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
+            log-abandoned: true
+            remove-abandoned: true
+            remove-abandoned-timeout-millis: 1800
 
 
 
